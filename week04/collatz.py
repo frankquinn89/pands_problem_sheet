@@ -5,35 +5,40 @@
 # Author : Frank Quinn
 
 
-def calc_value(value):
+def collatz_calc(value):
+    numbers = []
     # Continue process until value = 1 
     while value != 1:
         # Print value each time
-        print(value)
+        numbers.append(value)
         # Check if value is even, if so, divide by 2
         if value % 2 == 0:
             value = value // 2
         else:
             # If value is odd, multiply by 3 and add 1
             value = (value * 3) + 1
-    # Print value once loop is complete       
-    print(value)
+    # Print list once loop is complete. Add 1 by default
+    numbers.append(1)
+    # print numbers on same line
+    print(*numbers, sep=' ')
 
 
-def get_number():
+
+
+def validate_number():
     #loop to keep trying to get pos int
     while True:
         try:
             num = int(input("Enter a positive integer: "))
-            if not isinstance(num, int):
+            if num < 1:
                 raise ValueError
             break
         #exception handling
         except ValueError:
             print("Error! Enter a positive integer.")
     # If number is valid, run the calc logic
-    calc_value(num)
+    collatz_calc(num)
 
 
-#run program
-get_number()
+#run program and validate input number
+validate_number()
