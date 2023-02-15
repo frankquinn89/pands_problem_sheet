@@ -25,7 +25,7 @@ def get_number():
     while True:
         try:
             num = int(input("Enter a positive integer: "))
-            if num <= 0:
+            if not isinstance(num, int):
                 raise ValueError
             break
         #exception handling
