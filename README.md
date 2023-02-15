@@ -9,3 +9,6 @@ Hello World Program
 
 Week 2:
 Program to add 2 amounts in cents and display to sum in euro form
+
+Week 3:
+Program to take an input account number and output the account number, hiding all but last 4 characters
