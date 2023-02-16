@@ -9,7 +9,7 @@ def collatz_calc(value):
     numbers = []
     # Continue process until value = 1 
     while value != 1:
-        # Print value each time
+        # append number to list
         numbers.append(value)
         # Check if value is even, if so, divide by 2
         if value % 2 == 0:
@@ -17,7 +17,7 @@ def collatz_calc(value):
         else:
             # If value is odd, multiply by 3 and add 1
             value = (value * 3) + 1
-    # Print list once loop is complete. Add 1 by default
+    # Add 1 to list by default
     numbers.append(1)
     # print numbers on same line
     print(*numbers, sep=' ')
