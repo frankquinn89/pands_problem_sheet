@@ -20,7 +20,8 @@ This is the repo for the weekly taks for the Higher Diploma in Data Analytics.
   <dt>Week 4: collatz.py </dt>
   <dd>Colltaz Program. It take a positve integer input, if it is even then the program will divide it by 2 or if it is odd then it will multiply it by 3 and add 1. The program will repeat this process for each value until you get 1. </dd>
   
- 
+   <dt>Week 5: weekday.py </dt>
+  <dd>This program gets the current day of the week. If it is a weekday (Monday - Friday) it will output "Yes, unfortunately today is a weekday". If it is the weekend (Saturday or Sunday), it will output "It's the weekend, yay!" </dd>
   
   
   
