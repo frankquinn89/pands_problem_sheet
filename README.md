@@ -23,6 +23,8 @@ This is the repo for the weekly taks for the Higher Diploma in Data Analytics.
    <dt>Week 5: weekday.py </dt>
   <dd>This program gets the current day of the week. If it is a weekday (Monday - Friday) it will output "Yes, unfortunately today is a weekday". If it is the weekend (Saturday or Sunday), it will output "It's the weekend, yay!" </dd>
   
+  <dt>Week 6: squareroot.py </dt>
+  <dd>This program calculates the square root of a positive float number using the Newton method" </dd>
   
   
 </dl>
