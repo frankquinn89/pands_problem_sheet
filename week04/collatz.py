@@ -25,7 +25,8 @@ def collatz_calc(value):
 
 
 
-def validate_number():
+def main():
+    # Validation
     #loop to keep trying to get pos int
     while True:
         try:
@@ -40,5 +41,5 @@ def validate_number():
     collatz_calc(num)
 
 
-#run program and validate input number
-validate_number()
+#run main program 
+main()

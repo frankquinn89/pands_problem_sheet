@@ -1,4 +1,4 @@
-# sqrt.py
+# squareroot.py
 # This program takes a positive floating-point number as input and outputs an approximation of its square root via the Newton Method
 # Author: Frank Quinn
 
