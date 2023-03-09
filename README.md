@@ -5,8 +5,25 @@
 # pands_problem_sheet
 This is the repo for the weekly taks for the Higher Diploma in Data Analytics.
 
+## How to download this repository
+
+1. On GitHub, navigate to the main page of the repository.
+2. Under the repository name, click Clone or download.
+3. In the Clone with HTTPs section, click to copy the clone URL for the repository.
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 2.
+7. Press Enter. Your local clone will be created.
+
+## How to run the code
+
+1. Make sure you have python v. 3.8 installed. This can be downloaded here from the [anaconda website](https://www.anaconda.com/distribution/).
+2. Run command line.
+3. Navigate to where you have the files saved in your directory.
+4. Type python followed by the file name to run the program. All problems and their corresponding filenames are listed below.
+
 ## Tasks
-* [Weekly tasks](#weekly-tasks)
+* 
     * [Hello World](#hello-world)
     * [Bank](#bank)
     * [Accounts](#accounts)
@@ -14,8 +31,7 @@ This is the repo for the weekly taks for the Higher Diploma in Data Analytics.
     * [Weekday](#weekday)
     * [Square root](#square-root)
     * [Es](#es)
-
-======
+----------
 ### ***Hello World***
 
     Write a program that displays Hello World! when it is run.
@@ -48,7 +64,7 @@ Hello World!
     Write a program called bank.py which reads in two money amounts (in cent) and adds the two amounts.
     It should print out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount  
     
-This program just adds the input vales and outputs the result.
+This program just adds the input values and outputs the result.
 
 <details>
            <summary>How To Run</summary>
@@ -79,7 +95,7 @@ The sum of 65 cents and 180 cents is : €2.45
     Program to take a string account number as input and output the account number, hiding all characters as X except last 4 characters.
    I have made the assumption that an account number must be at least 5 characters long.
 
-This program looks at the length of the account replaces all characters except the last 4 with X. Then it just appends the last 4 digits to the X's.
+This program looks at the length of the account, reads everything backwards from the last 4 digits and adds an X for each character. Then it just appends the last 4 digits to the X's and outputs the result.
 
 <details>
            <summary>How To Run</summary>
@@ -118,7 +134,7 @@ Account Number must contain at least 5 characters. Try again:
 
 
 
-Using a *while* loop we are checking if a number is odd or even. Then using if/else statements,  it's going to do recursive calculations until the value is 1. \
+Using a while loop we are checking if a number is odd or even. Then using if/else statements,  it's going to do recursive calculations until the value is 1. \
 The program checks if the number is even using modulus. If remainder is zero, the number is even so the program divides the value by 2. \
 If the remainder is odd, we multiply the number by 3 and add 1. 
 
@@ -153,56 +169,32 @@ Enter a positive integer:
 
 ----
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ### ***Weekday***
 
-    Write a program that outputs whether or not today is a weekday.
+    Write a program that outputs a diiferent message depending on if it a weekday or weekend.
 
-For this program it is neccessary to import *datetime* module so we can manipulete date and time.
+This uses the datetime module.
 
-Even though the Programming and scripting [video](https://web.microsoftstream.com/video/77f26693-82ed-4006-8c22-c61d37e2f77f) gave the initial idea, a little bit of research on [Python documentation](https://docs.python.org/3/library/datetime.html#datetime.datetime.now) helped to crack the code.\
-There it was found that by implementing *date.weekday()*, where Monday is 0 and Sunday is 6, it can easily be checked, with the help of *if* statement, whether today is weekday or weekend.
+It uses the .weekday() function to return the of the week as an integer. 0-Monday to 6-Sunday.
+If result is 0-4 then it is a weekday, otherwise it is the weekend.
 
-It's important to run the program on both the weekday and weekend to get a correct result.
 
 <details>
-           <summary>User point of view</summary>
+           <summary>How To Run :</summary>
            <p>
 
-User call of the program is :
+Command line :
 
 ```
-λ python 5-weekday.py
+λ python weekday.py
 ```
-This program does not requre any user input, it just outputs the result.
-On the weekday result is:
+If result is Monday-Friday (Week day):
 ```
-Yes, unfortunately today is a weekday.
+Yes, unfortunately today is a weekday
 ```
-On the weekend result is:
+If result is Saturday or Sunday (Weekend):
 ```
-It is the weekend, yay!
+It's the weekend, yay!
 ```
 </p>
 </details>
@@ -211,42 +203,49 @@ It is the weekend, yay!
 
   ### ***Square root***
 
-    Write a program that takes a positive floating-point number as input and outputs an 
-    approximation of its square root.
-    You should create a function called sqrt that does this.
-
-Addition to the task: 
+    Write a program that takes a positive floating-point number as an input and outputs an 
+    approximation of its square root. Do not use existing python squareroot function.
     
-    The weekly task is trickier than the previous ones but I really suggest you try to crack it.
-    You'll find a simple algorithm for the problem if you Google "Newton's method for square roots".
-    I really recommend trying to code it up yourself rather than looking at others' implementations.
 
-This program required hours of research. Websites used for research and understandig are [Geeksforgeeks.org](https://www.geeksforgeeks.org/program-for-newton-raphson-method/), [StackOverflow](https://stackoverflow.com/questions/12850100/finding-the-square-root-using-newtons-method-errors), [Hackernoon](https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo), [Math.ubc.ca](https://www.math.ubc.ca/~pwalls/math-python/roots-optimization/newton/), but the most helpfull one was a Youtube video by [Mechtutor com](https://www.youtube.com/watch?v=szQUIRPrAgQ). 
+# Newton Method
+https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/
 
-The most challenging part was the understanding how the method works, and the coding after that was just implementing mathematical formulas.
+root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 1. 
 
-Like in the Collatz task, here I also implemented checking if the user input indeed is the positive floating-point number. This was done with an *if* statement checking if the number was smaller than zero. If it is, number was changed into a postive one using absolute value with the help of *abs()* function.
+In the above formula, X is any assumed square root of N and root is the correct square root of N. 
+Tolerance limit is the maximum difference between X and root allowed. 
 
-Function was created with a keyword *def sqrt()*, and later called with the keywords *sqrt(x)*. In the function variable *n* is defined as an initial guess that first iteration equals to the number we want to root (variable *x* that was the user input). Next, *while* loop is checking 2 conditions of convergence. When conditions are no longer true, function returns the value of variable *x*. Function is called when the result is outputed.
+
+Approach: The following steps can be followed to compute the answer:  
+1. Assign X to the N itself.
+2. Now, start a loop and keep calculating the root which will surely move towards the correct square root of N.
+3. Check for the difference between the assumed X and calculated root, if not yet inside tolerance then update root and continue.
+4. If the calculated root comes inside the tolerance allowed then break out of the loop.
+5. Print the root.
+
 
 <details>
-           <summary>User point of view</summary>
+           <summary>How To Run :</summary>
            <p>
 
-User call of the program is :
+Command line :
 
 ```
-λ python 6-squareroot.py
+λ python squareroot.py
 ```
-User input :
 ```
-Input positive floating-point number: -20.5
+Enter a positive number: 9.5
 ```
-In case of putting in a negative integer the program will respond with a message that a number is negative and fix it for the user, giving the output straight away as well:
 ```
-Oops, your input is a negative number. I'm sure it's a mistake.
-I'll fix it for you: 20.5
-The square root of  20.5 is approx.   4.528
+The approximate square root of 9.5 is 3.1
+```
+There is some validation in place if the user does not input positive number using a while loop to prompt user to try again:
+ ```
+Enter a positive number: -9
+```
+ ```
+
+Error! Enter a positive number:
 ```
 </p>
 </details>
@@ -257,29 +256,43 @@ The square root of  20.5 is approx.   4.528
 
     Write a program that reads in a text file and outputs the number of e's it contains.
     The program should take the filename from an argument on the command line. 
+   
+Note: I am assuming the user wants to get lower case e's and upper case E's.
 
-This program reads a text file called by user as an argument in the command line. The requirement is that a requested file is in the same directory (folder) as is this program.
+This program reads a text file which is passed as an argument in the command line. 
+Note: The file must be located in the same directory this program (es.py).
 
-To make that possible *sys* method was imported. Using the *sys.argv[1]* variable, it is defined that the filename is second argument when calling a program ( *sys.argv[0]* is the program we are trying to start ).\
-References for this part of program go to [Python documentation](https://docs.python.org/3.8/library/sys.html) and [Geeksforgeeks.org](https://www.geeksforgeeks.org/command-line-arguments-in-python/#sys).
+To get a file from command line we need to use sys.argv[1] variable. This is becuase sys.argv[0] would cpature the python file as first varible and try to pass that. sys.argv[1] will take second argument when calling a program.\
 
-With the *open( filename,'r' )* function we are opening a file that we called in the command line argument, and making it available just for reading.
-For counting the lower case letter 'e' the method *count()* was used, and the argument is a string *"e"*. Reference for the *count()* method is [Programiz](https://www.programiz.com/python-programming/methods/string/count).
+The open( filename,'r' ) is used to open and read the file.
+I am using .count("e") and .count("E") functions to gather the total amount of the letters.
+
 
 <details>
-           <summary>User point of view</summary>
+           <summary>How To Run :</summary>
            <p>
 
-User call of the program is :
+Sample test.txt file:
+#Hello! There should be 6 E's in this file!#
+              
+              
+Command line:
 
 ```
-λ python 7-es.py moby-dick.txt
+λ python es.py test.txt
 ```
 
-Output is simply the number of letter "e" in the called file :
+```
+The total amount of e/E in test.txt is 6
+```
+There is validation included to check that user is passing a txt file using a simple .endswith(".txt") function on the filename.
 
 ```
-116960
+λ python es.py test.pdf
+```
+
+```
+Invalid file type, must be a .txt file
 ```
 </p>
 </details>
