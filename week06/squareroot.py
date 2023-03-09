@@ -15,17 +15,17 @@
 
 def sqrt(num) :
     # Assuming the sqrt of num as num only
-    x = num
+    guess = num
     while True :
         # Calculate more closed x
-        root = 0.5 * (x + (num / x))
+        root = 0.5 * (guess + (num / guess))
         # Check for closeness / tolerance difference of root
-        if (abs(root - x) < 0.0001) :
+        if (abs(root - guess) < 0.0001) :
             break
         # Update root
-        x = root
+        guess = root
 
-    approx_root = format(x, '.1f')
+    approx_root = format(guess, '.1f')
     print(f"The approximate square root of {num} is {approx_root}")
  
 
