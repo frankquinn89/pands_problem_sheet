@@ -1,9 +1,9 @@
-# Andrew, we spoke about marking my documentation, research and consistency based on my project assignment and apply that to my problem sheet assignments. See my email from Feb 2nd 2023. I am an experienced coder so may not have much/any references for these tasks.
+# Andrew, we spoke about marking my documentation and research more so based on my project assignment and apply that to my problem sheet assignments. See my email from Feb 2nd 2023. I am an experienced coder so may not have much references for these tasks.
 
 ![image](https://user-images.githubusercontent.com/16778503/219499061-23b8d445-1023-4579-a5e6-9bcf020dda79.png)
 
 # pands_problem_sheet
-This is the repo for the weekly taks for the Higher Diploma in Data Analytics.
+This is the repo for the weekly tasks for the Higher Diploma in Data Analytics.
 
 ## How to download this repository
 
@@ -20,7 +20,7 @@ This is the repo for the weekly taks for the Higher Diploma in Data Analytics.
 1. Make sure you have python v. 3.8 installed. This can be downloaded here from the [anaconda website](https://www.anaconda.com/distribution/).
 2. Run command line.
 3. Navigate to where you have the files saved in your directory.
-4. Type python followed by the file name to run the program. All problems and their corresponding filenames are listed below.
+4. Type python followed by the file name to run the program. All programs and their corresponding filenames are listed below.
 
 ## Tasks
 * 
@@ -64,7 +64,7 @@ Hello World!
     Write a program called bank.py which reads in two money amounts (in cent) and adds the two amounts.
     It should print out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount  
     
-This program just adds the input values and outputs the result.
+This program just adds the input cent values and outputs the combined sum in converted euro format.
 
 <details>
            <summary>How To Run</summary>
@@ -171,7 +171,7 @@ Enter a positive integer:
 
   ### ***Weekday***
 
-    Write a program that outputs a diiferent message depending on if it a weekday or weekend.
+    Write a program that outputs a different message depending on if it a weekday or weekend.
 
 This uses the datetime module.
 
@@ -262,7 +262,7 @@ Note: I am assuming the user wants to get lower case e's and upper case E's.
 This program reads a text file which is passed as an argument in the command line. 
 Note: The file must be located in the same directory this program (es.py).
 
-To get a file from command line we need to use sys.argv[1] variable. This is becuase sys.argv[0] would cpature the python file as first varible and try to pass that. sys.argv[1] will take second argument when calling a program.\
+To get a file from command line we need to use sys.argv[1] variable. This is because sys.argv[0] would capture the python file as first varible and try to pass that. sys.argv[1] will take second argument when calling the program.\
 
 The open( filename,'r' ) is used to open and read the file.
 I am using .count("e") and .count("E") functions to gather the total amount of the letters.
@@ -272,8 +272,8 @@ I am using .count("e") and .count("E") functions to gather the total amount of t
            <summary>How To Run :</summary>
            <p>
 
-Sample test.txt file:
-#Hello! There should be 6 E's in this file!#
+Sample test.txt file:\
+Hello! There should be 6 E's in this file!
               
               
 Command line:
